@@ -14,11 +14,12 @@ module.exports = function (config) {
         exclude: [],
         preprocessors: {},
         reporters: ['spec'],
-        port: 9876,
+        hostname: process.env.IP,
+        port: process.env.PORT,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: false,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         singleRun: true,
         concurrency: Infinity
     })
